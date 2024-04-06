@@ -1,0 +1,43 @@
+&CONTROL
+calculation = "relax",
+prefix = "methanol",
+pseudo_dir = ".",
+restart_mode = "from_scratch",
+nstep = 200,
+/
+&SYSTEM
+ibrav = 0,
+celldm(1) = 28.345889829, 
+nspin = 1,
+ntyp = 3,
+nat = 6,
+occupations = "fixed",
+ecutwfc = 50.0,
+ecutrho = 500.0,
+/
+&ELECTRONS
+mixing_beta = 0.5,
+electron_maxstep = 500,
+conv_thr = 1.0D-8,
+diagonalization = 'david'
+/
+&IONS
+ion_dynamics = 'bfgs'
+/
+CELL_PARAMETERS alat
+  1 0 0
+  0 1 0
+  0 0 1
+ATOMIC_SPECIES
+C     12.011  C.paw.UPF
+H     1.00784 H.paw.UPF
+O     15.999  O.paw.UPF
+K_POINTS automatic
+1 1 1 0 0 0
+ATOMIC_POSITIONS angstrom
+O 3.6024 -0.355 0
+C 4.83226 0.355 0
+H 5.07246 -0.407398 -0.5
+H 5.59466 0.7952 0.5
+H 4.59206 1.1174 -0.5
+H 2.84 0.0852 0.5
